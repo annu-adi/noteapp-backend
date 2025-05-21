@@ -7,7 +7,7 @@ import noteRouter from './routes/note.js'
 
 const app = express()
 app.use(cors({
-    origin: ["Allow CORS:Access-Control-Allow-Origin"],
+    origin: ["Access-Control-Allow-Origin"],
     methods:["GET","POST","PUT","DELETE"],
     credentials:true
 }));
