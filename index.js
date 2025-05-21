@@ -10,7 +10,7 @@ app.use(cors({
     origin: ["https://noteapp-frontend-ufo7.vercel.app"],
     methods:["GET","POST","PUT","DELETE"],
     credentials:true
-}))
+}));
 app.get('/',(req, res)=>{
 res.json("Hello ji")
 })
