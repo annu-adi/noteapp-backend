@@ -7,7 +7,7 @@ import noteRouter from './routes/note.js'
 
 const app = express()
 app.use(cors({
-    origin: ["https://noteapp-frontend-ufo7.vercel.app"],
+    origin: ["*"],
     methods:["GET","POST","PUT","DELETE"],
     credentials:true
 }));
