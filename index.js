@@ -7,19 +7,20 @@ import noteRouter from './routes/note.js'
 
 const app = express()
 app.use(cors({
-    origin: ["Access-Control-Allow-Origin"],
+    origin: ["http://localhost:5173"],
     methods:["GET","POST","PUT","DELETE"],
     credentials:true
 }));
-app.get('/',(req, res)=>{
-res.json("Hello ji")
-})
+
 
 app.use(express.json())
 
 app.use('/api/auth', authRouter)
 app.use('/api/note', noteRouter)
 
+app.get('/',(req, res)=>{
+res.json("Hello ji")
+})
 app.listen(5000, () =>{
     connectToMongoDB()
     console.log("Server is running")
